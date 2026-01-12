@@ -1,0 +1,131 @@
+body {
+    background-image: url("pop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    cursor: url("images/mic.png") 16 16, auto;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+
+.card-title {
+    color: white;
+    font-family: "acid-green", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 0 0 8px #ff00aa, 0 0 18px #00f7ff, 0 0 14px #ffff00;
+}
+
+p {
+    color: white;
+    font-family: "blackcurrant", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+label {
+    color: white;
+    font-family: "blackcurrant", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card {
+    border: 5px solid #00ff6a;
+    border-radius: 25px;
+    background-color: black;
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2);
+}
+
+.btn {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-size: 120% auto;
+  background-image: linear-gradient(315deg, #00ffee 0%, #ff49d2 75%);
+  display: block;
+  margin: 30px auto 0;
+  height: 55px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.btn:hover {
+  background-position: right center;
+}
+.btn:active {
+  top: 2px;
+}
+
+option {
+  font-family: "dynapuff", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.form-control,
+.form-select {
+    background-color: #111;
+    border: 2px solid #00ffff;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #111;
+    color: #fff;
+    border-color: #ff49d2;
+    box-shadow: 0 0 10px rgba(255, 73, 210, 0.7);
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 8px #eeff00; }
+    50% { text-shadow: 0 0 20px #00f7ff; }
+    100% { text-shadow: 0 0 8px #ff00aa; }
+}
+
+.card-title {
+    animation: glowPulse 3s infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.card {
+    animation: float 6s ease-in-out infinite;
+}
+
+.card-title::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 6px;
+    margin: 15px auto;
+    background: linear-gradient(90deg, #ff49d2, #00ffee, #ffff00);
+    border-radius: 50px;
+}
+
+
