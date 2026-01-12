@@ -1,15 +1,27 @@
 function checkGenerateName() {
-    /*Get prefix & Age*/
-    const age = Number(document.getElementById("q2").value);
+    let newName
+    getPrefix()
+    getFirstName()
+    getMiddleName()
+    getLastName()
+    getSuffix()
+
+    newName = getPrefix(age) + ' ' + getFirstName(favFood) + ' ' +getMiddleName(middleName) + ' ' + getLastName(favColor) + ' ' + getSuffix(Gender)
+}
+/*Get prefix & Age*/
+function getPrefix() {
+    const age = Number(document.getElementById("age").value);
     let ageNumber;
     if (age < 18) {
         ageNumber = "Lil";
     } else {
         ageNumber = "Big";
     }
-
-    /*Get first name & Favorite Food*/
-    const food = Number(document.getElementById("q3").value);
+    return ageNumber
+}
+/*Get first name & Favorite Food*/
+function getFirstName() {
+    const food = Number(document.getElementById("favFood").value);
     let favFood
     if (food === "pizza") {
         favFood = "Pizza";
@@ -26,9 +38,16 @@ function checkGenerateName() {
     } else {
         favFood = "Foodie";
     }
+    return favFood
+}
 
-    /*Get middle name & Name*/
-    switch(letter) {
+/*Get middle name & Name*/
+
+function getMiddleName() {
+    let middleName
+    let letter = document.getElementById('name').value.charAt(0).toUpperCase()
+
+    switch (letter) {
         case "A":
             middleName = "Alpaca";
             break;
@@ -38,70 +57,70 @@ function checkGenerateName() {
         case "C":
             middleName = "Camel";
             break;
-            case "D":
+        case "D":
             middleName = "Dingo";
             break;
-            case "E":
+        case "E":
             middleName = "Eagle";
             break;
-            case "F":
+        case "F":
             middleName = "Fish";
             break;
-            case "G":
+        case "G":
             middleName = "Goat";
             break;
-            case "H":
+        case "H":
             middleName = "Horse";
             break;
-            case "I":
+        case "I":
             middleName = "Iguana";
             break;
-            case "J":
+        case "J":
             middleName = "Jaguar";
             break;
-            case "K":
+        case "K":
             middleName = "Kangaroo";
             break;
-            case "L":
+        case "L":
             middleName = "Llama";
             break;
-            case "M":
+        case "M":
             middleName = "Monkey";
             break;
-            case "N":
+        case "N":
             middleName = "Narwhal";
             break;
-            case "O":
+        case "O":
             middleName = "Orangutan";
             break;
-            case "P":
+        case "P":
             middleName = "Pony";
             break;
-            case "Q":
+        case "Q":
             middleName = "Quokka";
             break;
-            case "R":
+        case "R":
             middleName = "Raven";
             break;
-            case "T":
+        case "T":
             middleName = "Turkey";
             break;
-            case "U":
+        case "U":
             middleName = "Unicorn";
             break;
-            case "V":
+        case "V":
             middleName = "Vulture";
             break;
-            case "W":
+        case "W":
             middleName = "Worm";
             break;
-            case "X":
+        case "X":
             middleName = "Xenopus";
             break;
-            case "Y":
+        case "Y":
             middleName = "Yabby";
             break;
-            case "Z":
+        case "Z":
             middleName = "Zebu";
             break;
         default:
@@ -109,6 +128,43 @@ function checkGenerateName() {
             break;
     }
 
-
-
+    return middleName
 }
+/*Get Last Name & Fav Color */
+function getLastName() {
+    const color = Number(document.getElementById("favColor").value);
+    let = favColor
+    if (color === "red") {
+        favColor = "Splash"
+    } else if (color === "orange") {
+        favColor = "Pop";
+    } else if (color === "yellow") {
+        favColor = "Poof";
+    } else if (color === "green") {
+        favColor = "Bang";
+    } else if (color === "blue") {
+        favColor = "Snap";
+    } else if (color === "purple") {
+        favColor = "Zap";
+    } else if (color === "pink") {
+        favColor = "Buzz";
+    } else {
+        favColor = "Beep";
+    }
+    return favColor
+}
+
+/*Get Suffix & Gender */
+function getSuffix() {
+    const gender = Number(document.getElementById("gender").value);
+    let = gender
+    if (gender === "female") {
+        gender = "Jr"
+    } else if (gender === "male") {
+        gender = "Boi"
+    }
+    return gender
+}
+
+
+
