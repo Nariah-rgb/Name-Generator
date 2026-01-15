@@ -135,5 +135,45 @@ select.form-select {
   padding-right: 2.5rem;
 }
 
+#result-title {
+    color: white;
+}
+
+#result-message {
+    color: white;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#result-message {
+    text-shadow:
+        0 0 8px #e100ff,
+        0 0 16px rgba(119, 0, 255, 0.7);
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 3px solid #ff49d2;
+    box-shadow:
+        0 0 20px rgba(255, 73, 210, 0.6),
+        0 0 40px rgba(0, 255, 238, 0.4);
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+
+
 
 

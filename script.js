@@ -1,6 +1,5 @@
 function checkGenerateName() {
-    let newName
-    const age = Number(document.getElementById("age").value);
+    const age = document.getElementById("age").value;
     const favFood = document.getElementById("favFood").value;
     const gender = document.getElementById("gender").value;
     const favColor = document.getElementById("favColor").value;
@@ -16,6 +15,9 @@ function checkGenerateName() {
 
     document.getElementById("result-title").innerText = "Your Rap Name is:";
     document.getElementById("result-message").innerText = newName;
+    resultBox.style.display = "block"
+    
+
 
 }
 /*Get prefix & Age*/
@@ -165,16 +167,10 @@ function getLastName() {
 }
 
 /*Get Suffix & Gender */
-function getSuffix() {
-    const gender = Number(document.getElementById("gender").value);
-    let = gender
-    if (gender === "female") {
-        gender = "Jr"
-    } else if (gender === "male") {
-        gender = "Boi"
-    }
-    return gender
+function getSuffix(gender) {
+    if (gender === "female") return "Jr";
+    if (gender === "male") return "Boi";
+    return "";
 }
-
 
 
