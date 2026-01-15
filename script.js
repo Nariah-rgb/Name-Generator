@@ -15,7 +15,7 @@ function checkGenerateName() {
 
     document.getElementById("result-title").innerText = "Your Rap Name is:";
     document.getElementById("result-message").innerText = newName;
-    resultBox.style.display = "block"
+    document.getElementById("result").style.display = "block";
     
 
 

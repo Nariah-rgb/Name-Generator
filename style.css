@@ -161,6 +161,7 @@ select.form-select {
 }
 
 .result-box {
+    display: none;
     margin-top: 25px;
     padding: 25px;
     border-radius: 18px;
