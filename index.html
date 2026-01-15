@@ -1,109 +1,105 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Name Generator</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-            <link rel="stylesheet" href="style.css">
-            <link rel="stylesheet" href="https://use.typekit.net/mue8mcd.css">
-    </head>
+<head>
+    <title>Name Generator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main class="min-vh-100 d-flex justofy-content-center align-items-center">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Rap Name Generator</h4>
-                                <p class="card-text">Please Answer Each Question!</p>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label fw-semibold">What is your name?</label>
-                                    <input type="text" id="name" class="form-control" placeholder="Enter your name">
-                                </div>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mue8mcd.css">
+</head>
 
-                                <div class="mb-3">
-                                    <label for="age" class="for-label fw-semibold">How old are you?</label>
-                                    <input type="number" id="age" class="form-control" placeholder="Enter your age">
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="favFood" class="form-label fw-semibold">Which is your favorite food?</label>
-                                    <select id="favFood" class="form-select">
-                                        <option value="" disabled selected>Choose</option>
-                                        <option value="pizza">Pizza</option>
-                                        <option value="noodles">Noodles</option>
-                                        <option value="pasta">Pasta</option>
-                                        <option value="sushi">Sushi</option>
-                                        <option value="tacos">Tacos</option>
-                                        <option value="hamburgers">Hamburgers</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="gender" class="form-label fw-semibold">What is your gender?</label>
-                                    <select id="gender" class="form-select">
-                                        <option value="" disabled selected>Choose</option>
-                                        <option value="female">Female</option>
-                                        <option value="male">Male</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="favColor" class="form-label fw-semibold">Which is your favorite color?</label>
-                                    <select id="favColor" class="form-select">
-                                        <option value="" disabled selected>Choose</option>
-                                        <option value="red">Red</option>
-                                        <option value="orange">Orange</option>
-                                        <option value="yellow">Yellow</option>
-                                        <option value="green">Green</option>
-                                        <option value="blue">Blue</option>
-                                        <option value="purple">Purple</option>
-                                        <option value="pink">Pink</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-
-                                <button class="btn btn-lg" onclick="checkGenerateName()" type="button">
-                                    Generate Name
-                                </button>
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main class="min-vh-100 d-flex justofy-content-center align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Rap Name Generator</h4>
+                            <p class="card-text">Please Answer Each Question!</p>
+                            <div class="mb-3">
+                                <label for="name" class="form-label fw-semibold">What is your name?</label>
+                                <input type="text" id="name" class="form-control" placeholder="Enter your name">
                             </div>
+
+                            <div class="mb-3">
+                                <label for="age" class="for-label fw-semibold">How old are you?</label>
+                                <input type="number" id="age" class="form-control" placeholder="Enter your age">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="favFood" class="form-label fw-semibold">Which is your favorite food?</label>
+                                <select id="favFood" class="form-select">
+                                    <option value="" disabled selected>Choose</option>
+                                    <option value="pizza">Pizza</option>
+                                    <option value="noodles">Noodles</option>
+                                    <option value="pasta">Pasta</option>
+                                    <option value="sushi">Sushi</option>
+                                    <option value="tacos">Tacos</option>
+                                    <option value="hamburgers">Hamburgers</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="gender" class="form-label fw-semibold">What is your gender?</label>
+                                <select id="gender" class="form-select">
+                                    <option value="" disabled selected>Choose</option>
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="favColor" class="form-label fw-semibold">Which is your favorite
+                                    color?</label>
+                                <select id="favColor" class="form-select">
+                                    <option value="" disabled selected>Choose</option>
+                                    <option value="red">Red</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="green">Green</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <button class="btn btn-lg" onclick="checkGenerateName()" type="button">
+                                Generate Name
+                            </button>
+                            <div> id="result" class="result-box mt-4">
+                            <h2 id="result-title"></h2>
+                            <p id="result-message"></p>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-         <script src="script.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

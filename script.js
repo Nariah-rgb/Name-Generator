@@ -1,12 +1,22 @@
 function checkGenerateName() {
     let newName
-    getPrefix()
-    getFirstName()
-    getMiddleName()
-    getLastName()
-    getSuffix()
+    const age = Number(document.getElementById("age").value);
+    const favFood = document.getElementById("favFood").value;
+    const gender = document.getElementById("gender").value;
+    const favColor = document.getElementById("favColor").value;
 
-    newName = getPrefix(age) + ' ' + getFirstName(favFood) + ' ' +getMiddleName(middleName) + ' ' + getLastName(favColor) + ' ' + getSuffix(Gender)
+
+    const prefix = getPrefix(age);
+    const firstName = getFirstName(favFood);
+    const middleName = getMiddleName();
+    const lastName = getLastName(favColor);
+    const suffix = getSuffix(gender);
+
+    const newName = `${prefix} ${firstName} ${middleName} ${lastName} ${suffix}`;
+
+    document.getElementById("result-title").innerText = "Your Rap Name is:";
+    document.getElementById("result-message").innerText = newName;
+
 }
 /*Get prefix & Age*/
 function getPrefix() {
@@ -21,7 +31,7 @@ function getPrefix() {
 }
 /*Get first name & Favorite Food*/
 function getFirstName() {
-    const food = Number(document.getElementById("favFood").value);
+    const food = document.getElementById("favFood").value;
     let favFood
     if (food === "pizza") {
         favFood = "Pizza";
